@@ -1,0 +1,6 @@
+flask
+torch
+transformers
+alpaca-trade-api
+python-dotenv
+beautifulsoup4

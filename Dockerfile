@@ -24,4 +24,4 @@ EXPOSE 5000
 ENV PORT=5000
 
 # Run app.py when the container launches
-CMD exec gunicorn -b 0.0.0.0:$PORT app:app
+CMD exec gunicorn --timeout 120 -b 0.0.0.0:$PORT app:app

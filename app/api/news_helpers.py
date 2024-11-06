@@ -8,7 +8,8 @@ from dotenv import load_dotenv
 import os
 from bs4 import BeautifulSoup
 
-device = "mps" if torch.backends.mps.is_available() else ("cuda:0" if torch.cuda.is_available() else "cpu")
+# device = "mps" if torch.backends.mps.is_available() else ("cuda:0" if torch.cuda.is_available() else "cpu")
+device = 0 if torch.cuda.is_available() else -1
 
 finbert = BertForSequenceClassification.from_pretrained('yiyanghkust/finbert-tone', num_labels=3)
 tokenizer = BertTokenizer.from_pretrained('yiyanghkust/finbert-tone')
